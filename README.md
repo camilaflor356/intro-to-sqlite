@@ -17,3 +17,20 @@ You can ignore the middleware code -- at a very basic level, this code allows us
 The database `foo.db` contains one table named `user`.
 
 Use DB Browser to explore this database before you write any code!
+
+### Usage
+To get a single user by id, use this endpoint and enter id number (localhost:4000/user/:id)
+app.get("/user/:id", db.getUserById);
+
+To see all users, use this endpoint (localhost:4000/allinfo)
+app.get("/allinfo", db.getall);
+
+To create a new user, use this endpoint and enter the desired id number and name (localhost:4000/newuser/:id/:name)
+app.get("/newuser/:id/:name", db.newuser);
+
+To update a user's name, use this endpoint and enter your name and id number (localhost:4000/updateusername/:name/:id)
+app.get("/updateusername/:name/:id", db.newusername);
+
+To delete a user, use this endpoint and enter the user's id number (localhost:4000/deleteuser/:id)
+app.get("/deleteuser/:id", db.deleteuser);
+to 
